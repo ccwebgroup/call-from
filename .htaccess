@@ -1,0 +1,28 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^phonenumberclicked/(.*)$ phonenumberclicked.php?phone=$1 [QSA]
+
+RewriteRule phonenumberclicked.php - [L,NC]
+RewriteRule config.php - [L,NC]
+RewriteRule index26may2015.php - [L,NC]
+RewriteRule index18june2015.php - [L,NC]
+RewriteRule header.php - [L,NC]
+RewriteRule nav.php - [L,NC]
+RewriteRule phonenosubmitreview.php - [L,NC]
+RewriteRule vote.php - [L,NC]
+RewriteRule saveNewPhone.php - [L,NC]
+RewriteRule removalRequest.php - [L,NC]
+RewriteRule removeRequestSubmit.php - [L,NC]
+RewriteRule doNotCall.php - [L,NC]
+RewriteRule rate.php - [L,NC]
+
+RewriteRule (.*)$ index.php?number=$1 [QSA]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php71” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php71 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
